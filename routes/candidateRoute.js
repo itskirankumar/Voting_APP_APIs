@@ -171,6 +171,7 @@ router.get("/vote/count", async (req, res) => {
     //Map the candidates to only return their name and voteCount
     const voteCounts = candidate.map((data) => {
       return {
+        name:data.name,
         party: data.party,
         count: data.voteCount,
       };
